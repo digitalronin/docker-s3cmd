@@ -1,5 +1,5 @@
 build:
-	@docker build -t s3cmd_img .
+	@docker build -t digitalronin/s3cmd .
 
 run:
 	@docker run --rm \
@@ -7,5 +7,5 @@ run:
 		-e AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID} \
 		-e AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY} \
 		-v $$(pwd):/opt \
-		s3cmd_img \
+		digitalronin/s3cmd \
 		$(CMD)
